@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MvvmCross" Version="6.0.1" />
+    <PackageReference Include="MvvmCross.CodeAnalysis" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="1.6.0" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="1.6.0" />
+    <PackageReference Include="Microsoft.AppCenter" Version="1.6.0" />
+    <PackageReference Include="Microsoft.AppCenter.Push" Version="1.6.0" />
+    <PackageReference Include="Xam.Plugins.Notifier" Version="3.0.0-beta14" />
+    <PackageReference Include="MvvmCross.Plugin.File" Version="6.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\Settings\" />
+    <Folder Include="ViewModels\Favorites\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ViewModels\Settings\SettingsContainerViewModel.cs" />
+  </ItemGroup>
+</Project>
