@@ -15,8 +15,12 @@ using Android.Graphics.Drawables;
 
 namespace PushNotifTest.Droid.Views.Main
 {
-    [MvxFragmentPresentation(typeof(MainContainerViewModel), Resource.Id.content_frame)]
-    public class MainFragment : BaseFragment<MainViewModel>
+    [MvxFragmentPresentation(typeof(MainViewModel), Resource.Id.content_frame, false,
+                             Resource.Animation.abc_grow_fade_in_from_bottom,
+                             Resource.Animation.abc_fade_out,
+                             Resource.Animation.abc_fade_in,
+                             Resource.Animation.abc_fade_out)]
+    public class MainFragment : BaseFragment<HomeViewModel>
     {
         protected override int FragmentLayoutId => Resource.Layout.fragment_main;
     }

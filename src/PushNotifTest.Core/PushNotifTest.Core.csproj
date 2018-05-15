@@ -15,10 +15,6 @@
     <PackageReference Include="MvvmCross.Plugin.File" Version="6.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModels\Settings\" />
-    <Folder Include="ViewModels\Favorites\" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Remove="ViewModels\Settings\SettingsContainerViewModel.cs" />
   </ItemGroup>
 </Project>

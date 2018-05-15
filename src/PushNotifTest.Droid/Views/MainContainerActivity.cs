@@ -17,7 +17,7 @@ namespace PushNotifTest.Droid.Views.Main
     [Activity(
         Theme = "@style/AppTheme",
         WindowSoftInputMode = SoftInput.AdjustResize | SoftInput.StateHidden)]
-    public class MainContainerActivity : BaseActivity<MainContainerViewModel>
+    public class MainContainerActivity : BaseActivity<MainViewModel>
     {
         protected override int ActivityLayoutId => Resource.Layout.activity_main_container;
 
@@ -48,7 +48,7 @@ namespace PushNotifTest.Droid.Views.Main
             {
                 bottomNavigation.NavigationItemSelected += BottomNavigation_NavigationItemSelected;
                 // trying to bind command to view model property
-                var set = this.CreateBindingSet<MainContainerActivity, MainContainerViewModel>();
+                var set = this.CreateBindingSet<MainContainerActivity, MainViewModel>();
                 set.Bind(this).For(v => v.GoToSettingsCommand).To(vm => vm.NavigateToSettingsCommand);
                 set.Bind(this).For(v => v.GoToHomeCommand).To(vm => vm.NavigateToHomeCommand);
                 set.Bind(this).For(v => v.GoToFavoritesCommand).To(vm => vm.NavigateToFavoritesCommand);

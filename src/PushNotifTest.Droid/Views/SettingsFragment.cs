@@ -15,7 +15,12 @@ using PushNotifTest.Core.ViewModels.Settings;
 
 namespace PushNotifTest.Droid.Views.Settings
 {
-    [MvxFragmentPresentation(typeof(MainContainerViewModel), Resource.Id.content_frame)]
+    [MvxFragmentPresentation(typeof(MainViewModel), Resource.Id.content_frame, false,
+                             Resource.Animation.abc_grow_fade_in_from_bottom,
+                             Resource.Animation.abc_fade_out,
+                             Resource.Animation.abc_fade_in,
+                             Resource.Animation.abc_fade_out)]
+    [Register(nameof(SettingsViewModel))]
     public class SettingsFragment : BaseFragment<SettingsViewModel>
     {
         protected override int FragmentLayoutId => Resource.Layout.fragment_settings;
